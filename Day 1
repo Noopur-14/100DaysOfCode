@@ -41,3 +41,39 @@ class Solution {
 
     }
 }
+
+CONTAINS DUPLICATE:
+Brute force:
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        int len = nums.length;
+        
+        for(int i=0; i < len ; i++)
+        {
+            for(int j =i+1; j<len; j++)
+            {
+                if(nums[i]==nums[j])
+                {
+                    return true;
+                }
+            }
+        }
+      return false;
+    }
+}
+A more efficient approach is to use a hash set data structure to store the encountered elements.
+While iterating through the array, if an element is already present in the hash set, return true.
+Otherwise, add the element to the hash set. If the loop completes without finding any duplicates, return false
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num: nums)
+        {
+            if(map.containsKey(num) && map.get(num)>=1)
+               return true;
+             map.put(num, map.getOrDefault(num, 0) + 1);
+            
+        }
+        return false;
+    }
+}
