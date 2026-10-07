@@ -1,5 +1,4 @@
 # 100DaysOfCode
-Solving Data Structures and Algorithms in JAVA, learning problem solving patterns, improving everyday.
--Learn DSA in Java 
+Solving Data Structures and Algorithms in python/JAVA, learning problem solving patterns, improving everyday.
 -Build consistency through daily coding 
 -Understand problem-solving patterns 
